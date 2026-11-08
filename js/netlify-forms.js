@@ -1,9 +1,10 @@
 // Sends the contact form to Netlify Forms without leaving the page, then shows the
 // form's own "Thank you" or "Oops" message. If this script doesn't load, the form
 // still posts to "/" and Netlify shows its standard thank-you page instead.
+// Netlify strips data-netlify from the HTML when it deploys, so match the form by name.
 document.addEventListener("submit", function (event) {
   var form = event.target;
-  if (!form.matches || !form.matches("form[data-netlify]")) return;
+  if (!form.matches || !form.matches('form[name="contact"]')) return;
   event.preventDefault();
 
   var wrapper = form.closest(".w-form");
