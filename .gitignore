@@ -1,0 +1,4 @@
+.DS_Store
+# Source videos the pages never use; kept locally, left out of git.
+videos/FullersKitchen.mov
+videos/1.mp4

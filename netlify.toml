@@ -1,0 +1,4 @@
+# Plain static site exported from Webflow: no build step, Netlify publishes the repo as it is.
+# /about style URLs work because Netlify serves about.html for /about.
+[build]
+  publish = "."
